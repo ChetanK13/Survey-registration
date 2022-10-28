@@ -2,7 +2,7 @@ const userController = require('../controller/userController')
 const router = require("express").Router()
 
 
-router.post('/addUser', userController.addUser)
+router.post('/addUser', userController.addCandidate)
 
 router.get('/getAllUsers', userController.getAllUsers)
 

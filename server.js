@@ -35,7 +35,7 @@ app.use('/api',apiRoutes)
 
 
 
-const PORT = 3001
+const PORT = 7001
 
 
 app.listen(PORT, () => {

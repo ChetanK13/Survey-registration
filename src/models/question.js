@@ -1,29 +1,33 @@
 /** @format */
 
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("users", {
+  const Questions = sequelize.define("question", {
     uuid: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
     },
-    name: {
+    Qus1: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    mobile: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-    },
-    reference: {
+    Qus2: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Remark: {
+    Qus3: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    Qus4: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    userUuid: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+
   });
-  return User;
+  return Questions;
 };

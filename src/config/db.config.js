@@ -1,7 +1,17 @@
-module.exports={
-    HOST:'localhost',
-    USER:'root',
-    PASSWORD :'Qwerty!12',
-    DB:'survey',
-   dialect:'mysql'
-}
+/** @format */
+
+// module.exports={
+//     HOST:'localhost',
+//     USER:'root',
+//     PASSWORD :'Qwerty!12',
+//     DB:'survey',
+//    dialect:'mysql'
+// }
+
+module.exports = {
+  HOST: "localhost",
+  USER: "root",
+  PASSWORD: "Password!1",
+  DB: "survey",
+  dialect: "mysql",
+};

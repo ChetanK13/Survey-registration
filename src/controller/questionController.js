@@ -55,10 +55,10 @@ const getQuestionByUserId = async (req, res) => {
 const updateQuestionsById = async (req, res) => {
   let id = req.params;
   console.log(id);
-  const Questions = await User.update(req.body, {
+  const questions = await Questions.update(req.body, {
     where: { uuid: id["uuid"] },
   });
-  console.log(Questions, "userrrrrrrrrrrrrrrrr");
+  console.log(questions, "userrrrrrrrrrrrr");
 
   res.status(200).send({ Code: 1, Message: "Updated sucessfully" });
 };

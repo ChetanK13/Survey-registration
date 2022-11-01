@@ -23,10 +23,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    userUuid: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+    // userUuid: {
+    //     type: DataTypes.STRING,
+    //     allowNull: false,
+    //   },
 
   });
   return Questions;

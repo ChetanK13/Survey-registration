@@ -9,7 +9,7 @@ router.post('/addQuestions', questioncontroller.addQuestions)
 
 router.get('/getAllQuestions', questioncontroller.getAllQuestions)
 
-router.get('/:uuid', questioncontroller.getQuestionByUserId)
+router.get('/:userUuid', questioncontroller.getQuestionByUserId)
 
 router.put('/:uuid', questioncontroller.updateQuestionsById)
 

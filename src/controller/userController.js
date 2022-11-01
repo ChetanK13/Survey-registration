@@ -16,7 +16,7 @@ const addCandidate = async (payload, res) => {
       Remark: payload.body.Remark,
     });
     const result = await candidateValidation.validateAsync(payload.body);
-    // console.log(result)
+    
     const candidate = await saveuser.save();
     res
       .status(200)
@@ -27,6 +27,13 @@ const addCandidate = async (payload, res) => {
       });
   } catch (error) {
     console.error(error);
+    res
+    .status(200)
+    .send({
+      Code: 1,
+      Message: "Something went wrong",
+      status:error
+    });
   }
 };
 

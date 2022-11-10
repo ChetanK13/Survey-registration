@@ -3,6 +3,8 @@
 const db = require("../models");
 const { QueryTypes, Sequelize } = require("sequelize");
 const sequelize = require("sequelize");
+const { array } = require("joi");
+const { Console } = require("console");
 
 const Questions = db.db.questions;
 const User = db.db.users;
@@ -11,16 +13,20 @@ const User = db.db.users;
 
 const addQuestions = async (req, res) => {
   const payload = req.body;
+  console.log(payload, 'checking')
   try {
-    // console.log(playLoad , 'checking')
-    const saveuser = await Questions.build(payload);
 
-    saveuser.save();
+    for (var i = 0; i < payload.length; i++) {
+      const saveuser = await Questions.build(
+        payload[i]
+        );
+      saveuser.save()
+    }
     res
       .status(200)
-      .send({ Code: "0", Message: "Created Questions", user_data: saveuser });
+      .send({ Code: "0", Message: "Created Questions", });
   } catch (error) {
-    console.error(error);
+    console.error(error, "error checking");
     res.status(200).send({
       Code: 1,
       Message: "Something went wrong",
@@ -32,17 +38,13 @@ const addQuestions = async (req, res) => {
 // ---------------------->2. get all users
 
 const getAllQuestions = async (req, res) => {
-  let users = await Questions.findAll({});
+  let users = await Questions.findAll({ include: [User] });
   res.status(200).send({ Message: "Data Fetched Successfully", users });
 };
 
 // ------------------->3. get single Questions
 
 const getQuestionByUserId = async (req, res) => {
-  // let id = req.params;
-  //   console.log(id, "entire object");
-  //   console.log(id["uuid"], "only id");
-  // console.log("====================api reading++==========================");
   let user = await Questions.findAll({
     where: { userUuid: req.params.userUuid },
   });

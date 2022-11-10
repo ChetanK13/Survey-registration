@@ -7,21 +7,25 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
     },
-    Qus1: {
+    Reference: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Qus2: {
+    Name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Qus3: {
+    Phone_no: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    Qus4: {
+    Location: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    Consent: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     // userUuid: {
     //     type: DataTypes.STRING,

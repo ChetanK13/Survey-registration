@@ -27,9 +27,10 @@ db.users = require("./user.js")(sequelize, DataTypes);
 
 db.questions = require("./question")(sequelize, DataTypes);
 
-//relationin qustions
+//relation in qustions
 db.users.hasMany(db.questions);
 db.questions.belongsTo(db.users);
+
 
 db.sequelize.sync({ force: false }).then(() => {
   console.log("yes re-sync done");

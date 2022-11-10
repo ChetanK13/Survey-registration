@@ -15,16 +15,16 @@ module.exports = {
       Date: {
         type: Sequelize.DATEONLY
       },
-      Qus1: {
+      Reference: {
         type: Sequelize.STRING
       },
-      Qus2: {
+      Phone_no: {
         type: Sequelize.STRING
       },
-      Qus3: {
+      Location: {
         type: Sequelize.STRING
       },
-      Qus4: {
+      Consent: {
         type: Sequelize.STRING
       },
 

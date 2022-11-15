@@ -2,10 +2,8 @@ const userController = require('../controller/userController')
 const questioncontroller=require('../controller/questionController');
 const router = require("express").Router()
 
-
 router.post('/addUser', userController.addCandidate)
 router.post('/addQuestions', questioncontroller.addQuestions)
-
 
 router.get('/getAllQuestions', questioncontroller.getAllQuestions)
 

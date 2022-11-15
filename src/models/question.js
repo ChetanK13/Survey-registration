@@ -26,12 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     Consent: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
-    },
-    // userUuid: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false,
-    //   },
-
+    }
   });
   return Questions;
 };

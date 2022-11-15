@@ -19,7 +19,7 @@ const addQuestions = async (req, res) => {
     for (var i = 0; i < payload.length; i++) {
       const saveuser = await Questions.build(
         payload[i]
-        );
+      );
       saveuser.save()
     }
     res

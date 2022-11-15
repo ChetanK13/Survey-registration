@@ -1,17 +1,11 @@
 /** @format */
+const dotenv = require("dotenv");
+dotenv.config();
 
 module.exports={
-    HOST:'localhost',
-    USER:'root',
-    PASSWORD :'Qwerty!12',
-    DB:'survey',
-   dialect:'mysql'
+    HOST:process.env.HOST,
+    USER:process.env.USER,
+    PASSWORD: process.env.PASSWORD,
+    DB:process.env.DB,
+   dialect:process.env.dialect,
 }
-
-// module.exports = {
-//   HOST: "localhost",
-//   USER: "root",
-//   PASSWORD: "Chetan@123",
-//   DB: "survey",
-//   dialect: "mysql",
-// };
